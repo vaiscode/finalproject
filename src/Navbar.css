@@ -1,0 +1,29 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(45, 103, 165);
+    padding: 1em 2em;
+}
+nav h1{
+    color: white;
+}
+
+#list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#list li {
+    list-style: none;
+    padding: 0 .3em;
+    position: relative;
+}
+
+#list li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
