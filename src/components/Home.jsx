@@ -1,34 +1,100 @@
 import React from 'react';
-import Navbar from './Navbar';
-import '../Home.css';
-import { Button, Typography } from '@mui/material';
-import email_icon from '../images/icons-email.png';
-import password_icon from '../images/icons-password.png';
+import {Carousel, Col, Container, Navbar, Row, Stack,} from 'react-bootstrap';
+import {Button, Typography} from '@mui/material';
+import '../Home.css'
+import img1 from './images/img1.jpg';
+import img2 from './images/img2.jpg';
+import img3 from './images/img3.jpg';
+import img4 from './images/img4.jpg';
+import img5 from './images/img5.jpg';
+import img6 from './images/img6.jpg';
 
 
 
-const Home = () => {
+const Home = () => {    
+
+
   return (
-    <div>
-        <Navbar/>
-      <div className='box'>
-        <div className='head'>
-           <div className="text">
-              <Typography variant='h5'>Welcome to ICTAK Exam Registration Portal</Typography>
-            </div>
+    <>
+    <section sm={12}>
+    <Carousel fade>
+      <Carousel.Item interval={3000}>
+        <img
+          className="d-block w-100"
+          src={img1}
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+        <img
+          className="d-block w-100"
+          src={img2}
+          alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+        <img
+          className="d-block w-100"
+          src={img3}
+          alt="Third slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+        <img
+          className="d-block w-100"
+          src={img4}
+          alt="Fourth slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item interval={3000}>
+        <img
+          className="d-block w-100"
+          src={img5}
+          alt="Fifth slide"
+        />
+      </Carousel.Item>
+    </Carousel>
+   </section>
 
-        <div className="line"></div>
-        </div>
-
-            <div className='list'> 
-               <Typography variant='h6'>Please login using PAATSHALA credentials and Register for Exist Exam</Typography>
-             </div>
-             <br /><br />
-        <div className="btn-container">
-            <Button variant="contained">Login</Button>
-            </div>
+    <section className='title'>
+        <Container>
+          <Row>
+            <Col sm={12}>
+              <Typography variant='h3' textAlign={'center'} fontWeight={700} marginTop={4} color={'white'}>
+                Welcome to ICTAK Exam Registration Portal</Typography>
+            </Col>
+          </Row>
+          </Container>
+      </section>
+      <section className='login' >
+        <Container>
+      <Stack direction="horizontal" gap={3}>
+      <div className="p-2">
+        <img src={img6} alt=".." width={550}/>
       </div>
-    </div>
+      <div className="p-2 ms-auto">
+        <p id='para'>Login with your PAATSHALA credentials and complete Exit Exam Registration</p>
+        <div className="p-2 ms-auto">
+      <Button variant="contained">Login</Button>
+      </div>
+      </div>  
+    </Stack>
+    </Container>
+    </section>
+   
+    <footer>
+    <Navbar className='footer'>
+      <Container>
+        <Navbar.Toggle/>
+        <Navbar.Collapse className="justify-content-center">
+          <Navbar.Text>
+            Copyright @2024
+          </Navbar.Text>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    </footer>
+    </>
   )
 }
 
