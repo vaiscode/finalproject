@@ -8,6 +8,10 @@ import img3 from './images/img3.jpg';
 import img4 from './images/img4.jpg';
 import img5 from './images/img5.jpg';
 import img6 from './images/img6.jpg';
+import { Link } from 'react-router-dom';
+
+
+
 
 
 
@@ -75,7 +79,7 @@ const Home = () => {
       <div className="p-2 ms-auto">
         <p id='para'>Login with your PAATSHALA credentials and complete Exit Exam Registration</p>
         <div className="p-2 ms-auto">
-      <Button variant="contained">Login</Button>
+      <Button variant="contained"><Link to={'/l'}  style={{textDecoration:'none',color:'white'}}>Login</Link></Button>
       </div>
       </div>  
     </Stack>
