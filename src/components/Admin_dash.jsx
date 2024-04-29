@@ -26,6 +26,8 @@ const Admin_dash = () => {
     };
   
   return (
+    <div>
+      <Ad_nav/>
     <div style={sectionStyle}>
       
       <div style={{marginLeft:'10%',marginright:'10%',marginTop:'4.5%',marginBottom:'30%'}}>
@@ -105,7 +107,7 @@ const Admin_dash = () => {
        
       </Grid>
     </Box>
-   
+   </div>
     
  </div>
  
